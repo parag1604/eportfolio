@@ -225,7 +225,7 @@
               <h3 class="mb-0">Indian Institute of Science, Banaglore</h3>
               <div class="subheading mb-3">Master of Technology</div>
               <div>Computer Science and Engineering</div>
-<!--               <p>GPA: N/A</p> -->
+              <p>GPA: N/A</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">August 2019 onwards</span>
@@ -237,7 +237,7 @@
               <h3 class="mb-0">Government College of Engineering and Leather Technology, Kolkata</h3>
               <div class="subheading mb-3">Bachelor of Technology</div>
               <div>Computer Science and Engineering</div>
-<!--               <p>GPA: 8.89</p> -->
+              <p>GPA: 8.89</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">August 2015 - June 2019</span>
@@ -249,7 +249,7 @@
               <h3 class="mb-0">DAV Public School, Kolkata</h3>
               <div class="subheading mb-3">All India Senior Secondary Certificate Examination</div>
               <div>Science along with Computer Science</div>
-<!--               <p>Percentage: 86.4%</p> -->
+              <p>Percentage: 86.4%</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">May 2013 - April 2015</span>
@@ -260,7 +260,7 @@
             <div class="resume-content">
               <h3 class="mb-0">DAV Public School, Kolkata</h3>
               <div class="subheading mb-3">Secondary School Examination</div>
-<!--               <p>CGPA: 9.0</p> -->
+              <p>CGPA: 9.0</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">April 2011 - March 2013</span>
@@ -638,8 +638,10 @@
   $(document).ready(function() {
     $('#loader').fadeOut(function() {
       $('#content-main').fadeIn();
-      $('#hidden_email').mouseover(function(){
-        $('#hidden_email').text('paragdut'+'ta@'+'iisc.a'+'c.in');
+      var element = $('#hidden_email');
+      element.mouseover(function(){
+        element.text('paragdut'+'ta@'+'iisc.a'+'c.in');
+        element.attr("href", "https://www.w3schools.com/jquery/");
       });
       // $('#content-main').perfectScrollbar();
     });
