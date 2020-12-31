@@ -284,17 +284,18 @@
               <h3 class="mb-0">Few-shot Transfer Learning in Medical Imagingfrom Sparse Annotations</h3>
               <div class="subheading mb-3">In collaboration with Medical Imaging Group, IISc and GE Health Care</div>
               <p>
-                Labeling medical imaging data is a tedious process, and high-quality, dense annotations for image volumes
-                are hard to come by. I was involved in implementing two methods to predict medical image segmentation,
-                in particular spine segmentation, in the low data regime. Our aim was to train a model on data for which
+                I was involved in implementing two methods to predict medical image segmentation in particular
+                spine segmentation, in the low data regime. Our aim was to train a model on data for which
                 annotations are easily and readily available (lumbar spine images) such that it generalises well to similar
-                but previously unseen regions (thoracic/cervical spine). First, we implemented a contour propagation model
-                that uses priors obtained in a human-in-the-loop setting to generalise to regions of the spine not seen during
-                training. We show that this reduces the effort involved in annotating new data. Second, we implement a
-                transfer learning approach and pretrain a model on a large amount of partially annotated lumbar spine data
-                (source domain) and fine-tune the network on a limited amount of data with complete whole spine annotations
-                (target domain). We show that this method gives us a boost in performance with minimal complete volume
-                supervision at the time of training and without any supervision required at inference.
+                but previously unseen regions (thoracic/cervical spine).
+                First, we implemented a contour propagation model that uses priors obtained in a human-in-the-loop
+                setting to generalise to regions of the spine not seen during training.
+                We show that this reduces the effort involved in annotating new data.
+                Second, we implement a transfer learning approach and pretrain a model on a large amount
+                of partially annotated lumbar spine data (source domain) and fine-tune the network on a
+                limited amount of data with complete whole spine annotations (target domain). We show that
+                this method gives us a boost in performance with minimal complete volume supervision at the time of
+                training and without any supervision required at inference.
                 We achieved dice similiraty coefficients of upto 0.86 by using as low as just 20 volumes of CT scans.
               </p>
             </div>
