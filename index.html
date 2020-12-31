@@ -191,7 +191,7 @@
             I am a Computer Science and Engineering student and enthusiast, currently persuing my masters' degree.
             My primary area of research is Computer Vision, but am also passionate about Natural Language Processing,
             Reinforcement Learning and Robotics.
-            I can be found at Room 202 in Deptartment of Computer Science and Automation, IISc.
+            I can be found at Room 202/305 in Deptartment of Computer Science and Automation, IISc.
             <br />
             I am also a full stack web development hobbyist, and am currently voulnteering at CSA department web team.
           </p>
@@ -274,9 +274,74 @@
       <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+        
         <div class="w-100">
+          
           <h2 class="mb-5">Experience and Projects</h2>
-
+          
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0">Few-shot Transfer Learning in Medical Imagingfrom Sparse Annotations</h3>
+              <div class="subheading mb-3">In collaboration with Medical Imaging Group, IISc and GE Health Care</div>
+              <p>
+                Labeling medical imaging data is a tedious process, and high-quality, dense annotations for image volumes
+                are hard to come by. I was involved in implementing two methods to predict medical image segmentation,
+                in particular spine segmentation, in the low data regime. Our aim was to train a model on data for which
+                annotations are easily and readily available (lumbar spine images) such that it generalises well to similar
+                but previously unseen regions (thoracic/cervical spine). First, we implemented a contour propagation model
+                that uses priors obtained in a human-in-the-loop setting to generalise to regions of the spine not seen during
+                training. We show that this reduces the effort involved in annotating new data. Second, we implement a
+                transfer learning approach and pretrain a model on a large amount of partially annotated lumbar spine data
+                (source domain) and fine-tune the network on a limited amount of data with complete whole spine annotations
+                (target domain). We show that this method gives us a boost in performance with minimal complete volume
+                supervision at the time of training and without any supervision required at inference.
+                We achieved dice similiraty coefficients of upto 0.86 by using as low as just 20 volumes of CT scans.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2020 – January 2021</span>
+            </div>
+          </div>
+          
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0">Active Learning for Neural Machine Translation</h3>
+              <div class="subheading mb-3">Submitted to NAACL HLT 2021</div>
+              <p>
+                I was involved in generating a deep learning model which can be used to identify and eliminate
+                redundancies in existing Active Learning methods on a variety of tasks. While my co-authors
+                focused on tagging based tasks, I focused on machine translation. I used Siamese networks
+                pretrained with similarity loss to get embeddings of the sentences, followed by clustering and
+                selecting only the most relevant sentences for training a NMT model. We showed that our
+                model beats existing active learning methods by performing better after consuming same
+                amount of data on all NLP tasks we experimented on.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2020 – November 2020</span>
+            </div>
+          </div>
+          
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0">Explainable classification based on mitochondria treatment from microscope images</h3>
+              <div class="subheading mb-3">In collabration with Centre for BioSystems Science and Engineering, IISc</div>
+              <p>
+                I had to develop an end-to-end object classification model from the ground-up.
+                Since this was a project in the biological sciences domain, the main focus was to develop
+                a model that was not only accurate, but also had a very high explainablility.
+                Additionally there was also a need for the model to be lightweight, becasue the target
+                user circle are not supposed to have specialized hardware to run the model.
+                I developed a novel convolutional archtitecture with just 4 million parameters, which not
+                only achieved accuracies of 93% but also gave extremely explainable results with saliency maps.
+                A non-explainable model based on Fast-RCNN based architecture achieved more than 96% accuracy.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2020 – October 2020</span>
+            </div>
+          </div>
+          
           <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="resume-content">
               <h3 class="mb-0">Deepfake Detection in High Compression Videos</h3>
@@ -288,6 +353,7 @@
                 Hence, I developed a simple CNN based architecture inspired by the discriminator from DCGANs to detect facial
                 forgeries in highly compressed videos which detected 92% of the forged videos by only sampling 6 to 10 frames
                 per video and less than 200ms per frame; thus outperforming all existing methods by over 9% in accuracy.
+                Additional experiments pushed the accuracy to 95% by considering sequential relations in the video frames.
               </p>
             </div>
             <div class="resume-date text-md-right">
@@ -318,7 +384,9 @@
               <h3 class="mb-0">Prediction of colon cancer based on genome features</h3>
               <div class="subheading mb-3">B.Tech. Final Year Project</div>
               <p>
-                A supervised dataset was provided which had around 2000 features but only 62 observations. I expiremented with
+                Comparative study on performance of various machine learning models on low data regime.
+                A supervised dataset was provided which had around 2000 features but only 62 observations.
+                The work was mostly driven towards dimensionality reduction. I expiremented with
                 various dimention reduction algorithms like PCA, LDA, ICA, PLS, etc. On the reduced dataset I tried different
                 machine learning algorithms like Random Forest Ensembles, Support Vector Machines, Bayesian Networks, K -
                 Nearest Neighbors, etc. The best results was gained with PLS reduced dataset of 40 features along with Linear SVM.
@@ -338,9 +406,9 @@
                 to which the answer should be '299,792,458 m/s'. To do this, the query along with the top search results
                 would be provided, and after sorting them according to our requirements, we needed to extract the relevant
                 text and display it directly to the user if a certain confidence threshold was achieved. To do this I used
-                Question Answering model and Question Ask-Answer Dual Network. I Used Transformer Networks trained on SQuAD
-                and GloVE Embeddings, and then modified the networl to a create a dual ask answer network (to handle 
-                non-interrogative queries as well). 
+                a multi-hop attention networks for generating a ranking over relevant passages given a user
+                query. It was a pipelined model, which used pretrained transformers, and significantly
+                outperformed most of the models in the competition. 
               </p>
             </div>
             <div class="resume-date text-md-right">
